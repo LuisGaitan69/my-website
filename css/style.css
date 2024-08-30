@@ -1,0 +1,81 @@
+head{
+    color: black;
+}
+
+.Cuerpo {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border-color: black;
+    block-size: 10px;
+    display: block;
+}
+
+.card_list_1, .botonxd {
+    margin-top: 25px;
+}
+
+.need-margin {
+    margin-top: 25px;
+}
+
+.need-more-margin {
+    margin-top: 500px;
+}
+
+
+
+.list {
+    margin-top: 15px;
+}
+
+.list_2 {
+    margin-top: 7px;
+}
+
+.header_main {
+    background-image: url('../img/banner_inicio.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header_gustos {
+    background-image: url('../img/banner_gustos.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header_creaciones {
+    background-image: url('../img/banner_creaciones.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header_motivaciones {
+    background-image: url('../img/banner_motivaciones.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
