@@ -1,130 +1,163 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <button class="toggle-btn d-md-none" onclick="toggleSidebar()">
+        <i class="bi bi-list"></i>
+    </button>
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pepe</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </head>
-    <nav class="navbar navbar-expand-lg navbar-custom navbar-inverse navbar-dark fixed-top" style="background-color: rgb(38, 38, 41)">
-        <div class="container-fluid">
-          <a class="color-me navbar-brand" href="index.html ">Sobre mí</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="color-me nav-link active" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Opciones
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar bg-dark vh-100">
+        <ul class="nav flex-column pt-3">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="./index.html">
+                    <i class="bi bi-house"></i> <span class="ms-2">Inicio</span>
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="color-me dropdown-item" href="pages/motivaciones.html">Motivaciones</a></li>
-                  <li><a class="color-me dropdown-item" href="pages/creaciones.html">Creaciones</a></li>
-                  <li><a class="color-me dropdown-item" href="pages/gustos.html">Gustos</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-      </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="./pages/sobre-mi.html">
+                    <i class="bi bi-person"></i> <span class="ms-2">Sobre mí</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="./pages/vision.html">
+                    <i class="bi bi-eye"></i> <span class="ms-2">Visión</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="./pages/habilidades.html">
+                    <i class="bi bi-tools"></i> <span class="ms-2">Habilidades</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="./pages/gustos.html">
+                    <i class="bi bi-heart"></i> <span class="ms-2">Gustos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="./pages/portafolio.html">
+                    <i class="bi bi-briefcase"></i> <span class="ms-2">Portafolio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="./pages/foda.html">
+                    <i class="bi bi-pie-chart"></i> <span class="ms-2">FODA</span>
+                </a>
+            </li>
+        </ul>
     </nav>
 
-
-    <body class="Cuerpo">
-
-        <header class="header_main">
-          <div>
-            <h1>Bienvenido a mi página</h1>
-            <p>de Luis Fernando Gaitán Juárez.</p>
-          </div>
-        </header>
-
-        <div class="text-center">
-          <h1 class="need-margin">¿Quien Soy?</h1>
-        </div>
-
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <img class="card-img-top" src="img/ultrakill-v1.gif" class="img-fluid" style="border-radius: 100px;">
-            </div>
-
-            <div class="col-md-8">
-              <p class="mb-4 text-secondary need-margin">Soy Luis, soy un estudiante del instituto Emiliani Somascos, curso la carrera de perito en computación, me encanta la programación al igual
-                que los videojuegos, me encanta programar con JavaScript siempre que puedo, y me gusta bastante el desarrollo web, tiendo a ser alguien callado y reservado en
-                ciertos casos, pero trato de ser bastante amigable.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <h1 class="need-margin">Mas sobre mí</h1>
-        </div>
-
-        <section class="py-5 py-xl-8 bsb-section-py-xxl-1">
-          <div class="container overflow-hidden">
-            <div class="row gy-4 gy-md-0 gx-xxl-5">
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <div class="card-body text-center p-4 p-xxl-5">
-                    <img class="card-img-top" src="img/motivaciones-icono.png">
-                    <h4 class="fw-bold mb-4">Motivaciones</h4>
-                    <p class="mb-4 text-secondary">En este apartado se verán mis motivaciones principales.</p>
-
-                    <a href="pages/motivaciones.html" class="fw-bold text-decoration-none link-primary">
-                      Ver más
-                    </a>
-
-                  </div>
+    
+    <div class="content p-4">
+        <section class="container">
+            <div class="row justify-content-center align-items-center py-4">
+                <div class="col-md-4 justify-content-center">
+                    <img src="../img/pic.png" alt="Foto de perfil" class="img-fluid rounded-circle w-75">
                 </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <div class="card-body text-center p-4 p-xxl-5">
-                    <img class="card-img-top" src="img/creaciones-icono.png">
-                    <h4 class="fw-bold mb-4">Creaciones</h4>
-                    <p class="mb-4 text-secondary">Mis creaciones personales.</p>
-
-                    <a href="pages/creaciones.html" class="fw-bold text-decoration-none link-primary">
-                      Ver más
-                    </a>
-
-                  </div>
+                <div class="col-md-8">
+                    <h1>Introducción</h1>
+                    <p class="mb-4 text-secondary need-margin">
+                        Bienvenidos, este es mi sitio web, en esta página hablaré de algunos aspectos de mí, como gustos personales y creaciones laborales, esta página tiene un propósito completamente educativo, así que espero que les guste.!</p>
                 </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <div class="card-body text-center p-4 p-xxl-5">
-                    <img class="card-img-top" src="img/gustos-icono.png">
-                    <h4 class="fw-bold mb-4">Gustos</h4>
-                    <p class="mb-4 text-secondary">Mis gustos principalmente en videojuegos y música.</p>
-
-                    <a href="pages/gustos.html" class="fw-bold text-decoration-none link-primary">
-                      Ver más
-                    </a>
-
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </section>
 
-        <div class="text-center">
-          <img class="list" src="img/bee.jpg" style="width: 45px;">
-        </div>
+        <!-- Sección Sobre mí -->
+        <section class="container">
+            <div class="row justify-content-center align-items-center py-4">
+                
+                <section class="container py-4">
+                    <div class="row justify-content-center">
+                
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sobre mí</h5>
+                                    <a class="btn btn-success" href="./pages/sobre-mi.html" role="button">Ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Visión</h5>
+                                    <a class="btn btn-success" href="./pages/vision.html" role="button">Ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Habilidades</h5>
+                                    <a class="btn btn-success" href="./pages/habilidades.html" role="button">Ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gustos</h5>
+                                    <a class="btn btn-success" href="./pages/gustos.html" role="button">Ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Portafolio Personal</h5>
+                                    <a class="btn btn-success" href="./pages/portafolio.html" role="button">Ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">FODA</h5>
+                                    <a class="btn btn-success" href="./pages/foda.html" role="button">Ir</a>
+                                </div>
+                            </div>
+                        </div>
 
-    </body>
+                    </div>
+                </section>
 
-    <footer class="text-center text-lg-start">
-      <div class="text-center p-3" style="background-color: rgb(44, 44, 44);">
-        <h6 style="color: white; margin-top: 25px;">Copyright (c) 2024 Luis Gaitán</h6>
-      </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Luis Gaitán. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- animación de la sidebar - responsive -->
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            if (sidebar.classList.contains('show')) {
+                sidebar.style.left = '-250px';
+                setTimeout(() => sidebar.classList.remove('show'), 300);
+            } else {
+                sidebar.classList.add('show');
+                sidebar.style.left = '0';
+            }
+        }
+    
+        window.addEventListener('resize', function () {
+            let sidebar = document.getElementById('sidebar');
+            if (window.innerWidth >= 768) {
+                sidebar.classList.remove('show');
+                sidebar.style.left = '0';
+            }
+        });
+    </script>
+    
+</body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="content-overlay">
+            <h1 style="color: white;">Visión</h1>
+        </div>
+    </header>
+
+    
+    <button class="toggle-btn d-md-none" onclick="toggleSidebar() //muajaja">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar bg-dark vh-100">
+        <ul class="nav flex-column pt-3">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../index.html">
+                    <i class="bi bi-house"></i> <span class="ms-2">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/sobre-mi.html">
+                    <i class="bi bi-person"></i> <span class="ms-2">Sobre mí</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/vision.html">
+                    <i class="bi bi-eye"></i> <span class="ms-2">Visión</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/habilidades.html">
+                    <i class="bi bi-tools"></i> <span class="ms-2">Habilidades</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/gustos.html">
+                    <i class="bi bi-heart"></i> <span class="ms-2">Gustos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/portafolio.html">
+                    <i class="bi bi-briefcase"></i> <span class="ms-2">Portafolio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/foda.html">
+                    <i class="bi bi-pie-chart"></i> <span class="ms-2">FODA</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    
+    <div class="content p-4">
+        <section class="container">
+            <div class="row justify-content-center align-items-center py-4">
+                <div class="col-md-4 justify-content-center">
+                    <img src="../img/pic.png" alt="Foto de perfil" class="img-fluid rounded-circle w-50">
+                </div>
+                <div class="col-md-8">
+                    <h1>Mi Visión</h1>
+                    <p class="mb-4 text-secondary need-margin">
+                        Ser un desarrollador de videojuegos y aplicaciones, capaz de revolucionar la industria con nuevas ideas y nuevos estilos innovadores, y capaz de inspirar a los demás para poder lograr nuevos objetivos.                                    </p>
+                </div>
+
+                <div class="col-md-8">
+                    <h1>¿Cómo me veo en el futuro?</h1>
+                    <p class="mb-4 text-secondary need-margin">
+                        Me veo como un ingeniero en sistemas, y un gran desarrollador de videojuegos donde mi trabajo destaque por mis conocimientos.                                </div>
+                <div class="col-md-4 justify-content-center">
+                    <img src="../img/pic.png" alt="Foto de perfil" class="img-fluid rounded-circle w-50">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Luis Gaitán. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- animación de la sidebar - responsive -->
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            if (sidebar.classList.contains('show')) {
+                sidebar.style.left = '-250px';
+                setTimeout(() => sidebar.classList.remove('show'), 300);
+            } else {
+                sidebar.classList.add('show');
+                sidebar.style.left = '0';
+            }
+        }
+    
+        window.addEventListener('resize', function () {
+            let sidebar = document.getElementById('sidebar');
+            if (window.innerWidth >= 768) {
+                sidebar.classList.remove('show');
+                sidebar.style.left = '0';
+            }
+        });
+    </script>
+    
+</body>
+</html>

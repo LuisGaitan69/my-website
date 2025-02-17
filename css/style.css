@@ -1,86 +1,132 @@
-head{
-    color: black;
+/* Diseño base de la página */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.Cuerpo {
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    border-color: black;
-    block-size: 10px;
-    display: block;
-}
-
-.card_list_1, .botonxd {
-    margin-top: 25px;
-}
-
-.need-margin {
-    margin-top: 25px;
-}
-
-.need-more-margin {
-    margin-top: 500px;
-}
-
-
-
-.list {
-    margin-top: 15px;
-}
-
-.list_2 {
-    margin-top: 7px;
-}
-
-.header_main {
-    background-image: url('../img/banner_inicio.png');
+/* Header con imagen responsive */
+.header {
+    background-image: url('../img/banner_main.png');
     background-size: cover;
     background-position: center;
-    height: 70vh;
-    color: white;
+    height: 40vh;
+    padding: 200px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.header_gustos {
-    background-image: url('../img/banner_gustos.png');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    color: white;
+
+@media (max-width: 768px) {
+    .header {
+        height: 180px;
+    }
+}
+
+/* Sidebar base */
+.sidebar {
+    width: 60px;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    overflow: hidden;
+    background-color: #343a40;
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+}
+
+/* Expandir sidebar en PC al hacer hover */
+@media (min-width: 768px) {
+    .sidebar:hover {
+        width: 250px;
+    }
+}
+
+/* Estilo de los íconos y textos */
+.sidebar .nav-link {
     display: flex;
     align-items: center;
-    justify-content: center;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.sidebar .nav-link i {
+    width: 40px;
     text-align: center;
 }
 
-.header_creaciones {
-    background-image: url('../img/banner_creaciones.png');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.sidebar .nav-link span {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.header_motivaciones {
-    background-image: url('../img/banner_motivaciones.png');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/* Mostrar textos al expandir */
+@media (min-width: 768px) {
+    .sidebar:hover .nav-link span {
+        opacity: 1;
+    }
 }
 
-.carousel-caption-xd {
-    transform: translateY(50%) translateX(25%);
-    bottom: 80% !important;
+/* Ajustar contenido en PC */
+.content {
+    margin-left: 60px;
+    flex: 1;
+    transition: margin-left 0.3s ease-in-out;
+    margin-top: 25px; /* Ajusta el margen superior para que el contenido no se solape con el header */
+}
+
+@media (min-width: 768px) {
+    .sidebar:hover + .content {
+        margin-left: 250px;
+    }
+}
+
+/* Sidebar en móviles (offcanvas con animación) */
+@media (max-width: 767px) {
+    .sidebar {
+        width: 0;
+        position: fixed;
+        left: -250px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar.show {
+        left: 0;
+        width: 250px;
+    }
+
+    .sidebar.show .nav-link span {
+        opacity: 1;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 180px; /* Ajusta el margen superior para móviles */
+    }
+}
+
+/* Botón de abrir sidebar en móviles */
+.toggle-btn {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 1100;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Footer siempre abajo */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
 }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="content-overlay">
+            <h1 style="color: white;">Habilidades</h1>
+        </div>
+    </header>
+
+    
+    <button class="toggle-btn d-md-none" onclick="toggleSidebar() //muajaja">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar bg-dark vh-100">
+        <ul class="nav flex-column pt-3">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../index.html">
+                    <i class="bi bi-house"></i> <span class="ms-2">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/sobre-mi.html">
+                    <i class="bi bi-person"></i> <span class="ms-2">Sobre mí</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/vision.html">
+                    <i class="bi bi-eye"></i> <span class="ms-2">Visión</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/habilidades.html">
+                    <i class="bi bi-tools"></i> <span class="ms-2">Habilidades</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/gustos.html">
+                    <i class="bi bi-heart"></i> <span class="ms-2">Gustos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/portafolio.html">
+                    <i class="bi bi-briefcase"></i> <span class="ms-2">Portafolio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/foda.html">
+                    <i class="bi bi-pie-chart"></i> <span class="ms-2">FODA</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    
+    <div class="content p-4">
+        <!-- Sección Sobre mí -->
+        <section class="container py-4">
+            <div class="row justify-content-center">
+                <h1 class="text-center mb-4">Mis Habilidades</h1>
+                
+                <div class="col-md-6 col-lg-3 mb-4 card-hover" href="../index.html">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Programación en Frontend</h5>
+                            <p class="card-text">Puedo realizar tareas de frontend en web, utilizando herramientas como CSS puro, Bootstrap y Tailwind.</p>
+                        </div>
+                    </div>
+                </div>
+                
+        
+                <div class="col-md-6 col-lg-3 mb-4 card-hover">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Backend y Base de datos</h5>
+                            <p class="card-text">Tengo experiencia previa con bases de datos, y su aplicación en Backend, principalmente usando el framework de Python "Flask".</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4 card-hover">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Diseño Pixel Art</h5>
+                            <p class="card-text">Tengo habilidad en el diseño de texturas, principalmente en Pixel Art para proyectos como videojuegos.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4 card-hover">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Programación en JavaScript</h5>
+                            <p class="card-text">Poseo conocimientos basicos de JavaScript, podiendo realizar mapeados y consultas fetch para Backend.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Luis Gaitán. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- animación de la sidebar - responsive -->
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            if (sidebar.classList.contains('show')) {
+                sidebar.style.left = '-250px';
+                setTimeout(() => sidebar.classList.remove('show'), 300);
+            } else {
+                sidebar.classList.add('show');
+                sidebar.style.left = '0';
+            }
+        }
+    
+        window.addEventListener('resize', function () {
+            let sidebar = document.getElementById('sidebar');
+            if (window.innerWidth >= 768) {
+                sidebar.classList.remove('show');
+                sidebar.style.left = '0';
+            }
+        });
+    </script>
+    
+</body>
+</html>
